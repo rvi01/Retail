@@ -21,13 +21,13 @@ app.use(express.static(publicDirectoryPath));
 // use the router in your app
 app.use(express.json(), router);
 
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
     res.render("index",{
       title : "Home"
     });
 });
 
-app.get("/signin",(req,res) => {
+app.get("/",(req,res) => {
     res.render("signin")
 })
 

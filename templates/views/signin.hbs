@@ -11,24 +11,19 @@
     <div class="container-fluid">
         <div >
             <h3 class="mt-3 mb-3">Sign-up / Login</h3>
-            <div class="row display-none">
-                <div class="container text-center">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <button id="signup" class="btn btn-primary">Sign-up</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        </div>
-                    </div>
-                    
+            <div class="row">
+                <div class="col-6">
+                    <button id="signup" class="btn btn-primary signup">Sign-up</button>
+                </div>
+                <div class="col-6">
+                    <button id="login" class="btn btn-primary login">Login</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="container-fluid">
-        <div class="container-md align-items-left">
-            <form id="add">
+        <div class="container-md align-items-left" id="signupForm" style="display: none;">
+            <form id="addSignup">
                 <div class="row justify-content-around-start">
                     <div class="col-4">
                         <div class="mb-3">
@@ -63,14 +58,26 @@
             </form>
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="container-md align-items-left" id="LogInForm" style="display: none;">
+            <form id="LogInForm">
+                <div class="row justify-content-around-start">
+                    <div class="col-4 mb-3">
+                        <label for="loginEmail" class="form-label">Email address</label>
+                        <input type="loginEmail" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/script.js">
 
-$('document').ready(function(){
-  $('#signup').click(function(){
-    alert('I am executed with jQuery');
-  });
-});
-</script>
+<script src="/js/signlogin.js"></script>
